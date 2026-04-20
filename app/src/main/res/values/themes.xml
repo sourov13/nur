@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Nur" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/gold</item>
+        <item name="colorPrimaryVariant">@color/dusk</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/dusk</item>
+        <item name="colorOnSecondary">@color/cream</item>
+        <item name="android:colorBackground">@color/cream</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="android:statusBarColor">@color/dusk_dark</item>
+        <item name="android:navigationBarColor">@color/cream</item>
+    </style>
+</resources>

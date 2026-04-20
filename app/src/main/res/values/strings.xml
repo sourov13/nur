@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nūr</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_prayers">Prayers</string>
+    <string name="nav_reflection">Reflect</string>
+    <string name="nav_guidance">Guidance</string>
+    <string name="nav_bookmarks">Saved</string>
+    <string name="empty_feed">No posts yet.\nThe admin will share content soon 🌙</string>
+    <string name="app_provider_authority">com.nur.app.provider</string>
+</resources>

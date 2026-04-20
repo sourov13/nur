@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gold">#C9973A</color>
+    <color name="gold_light">#E8C97A</color>
+    <color name="dusk">#3B2F4A</color>
+    <color name="dusk_dark">#2A1F38</color>
+    <color name="rose">#B36060</color>
+    <color name="sage">#5A7A62</color>
+    <color name="cream">#FDF8EF</color>
+    <color name="parchment">#F7F0E3</color>
+    <color name="ink">#1A1208</color>
+    <color name="ink_light">#4A3D30</color>
+    <color name="divider">#E8D9BC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="text_secondary">#7A6A55</color>
+    <color name="error">#D32F2F</color>
+    <color name="surface">#FFFBF4</color>
+    <color name="nav_active">#C9973A</color>
+    <color name="nav_inactive">#7A6A55</color>
+</resources>

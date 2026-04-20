@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"      android:icon="@drawable/ic_home"       android:title="@string/nav_home" />
+    <item android:id="@+id/prayersFragment"   android:icon="@drawable/ic_prayer"     android:title="@string/nav_prayers" />
+    <item android:id="@+id/reflectionFragment" android:icon="@drawable/ic_reflection" android:title="@string/nav_reflection" />
+    <item android:id="@+id/guidanceFragment"  android:icon="@drawable/ic_guidance"   android:title="@string/nav_guidance" />
+    <item android:id="@+id/bookmarksFragment" android:icon="@drawable/ic_bookmark"   android:title="@string/nav_bookmarks" />
+</menu>
