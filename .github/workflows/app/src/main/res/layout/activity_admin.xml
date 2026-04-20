@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cream">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dusk_dark"
+        app:titleTextColor="@color/gold"
+        app:navigationIconTint="@color/gold" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dusk"
+        app:tabTextColor="@color/gold_light"
+        app:tabSelectedTextColor="@color/gold"
+        app:tabIndicatorColor="@color/gold"
+        app:tabIndicatorFullWidth="false" />
+
+    <!-- CREATE FORM -->
+    <ScrollView
+        android:id="@+id/formContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Post"
+                android:textSize="22sp"
+                android:textColor="@color/dusk"
+                android:textStyle="italic"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Post Type -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Post Type"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="4dp" />
+
+            <Spinner
+                android:id="@+id/spinnerType"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/bg_spinner" />
+
+            <!-- Title -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Title"
+                android:layout_marginBottom="14dp"
+                app:boxStrokeColor="@color/gold"
+                app:hintTextColor="@color/text_secondary">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Body -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Body / Message"
+                android:layout_marginBottom="14dp"
+                app:boxStrokeColor="@color/gold"
+                app:hintTextColor="@color/text_secondary">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minLines="5"
+                    android:gravity="top" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Category -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Category (e.g. Morning, Gratitude)"
+                android:layout_marginBottom="14dp"
+                app:boxStrokeColor="@color/gold"
+                app:hintTextColor="@color/text_secondary">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Tags -->
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tags (comma-separated)"
+                android:layout_marginBottom="18dp"
+                app:boxStrokeColor="@color/gold"
+                app:hintTextColor="@color/text_secondary">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Image -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Image"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="8dp" />
+
+            <ImageView
+                android:id="@+id/ivImagePreview"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_marginBottom="8dp"
+                android:background="@color/divider"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="18dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPickImage"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="📷  Add Image"
+                    app:strokeColor="@color/gold"
+                    android:textColor="@color/gold"
+                    app:cornerRadius="10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRemoveImage"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Remove"
+                    android:visibility="gone"
+                    app:strokeColor="@color/rose"
+                    android:textColor="@color/rose"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+            <!-- Schedule -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Schedule"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tvScheduledTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Not scheduled — publish immediately"
+                android:textSize="12sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="18dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSchedule"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:text="🗓  Schedule"
+                    app:strokeColor="@color/gold"
+                    android:textColor="@color/gold"
+                    app:cornerRadius="10dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClearSchedule"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:text="Clear"
+                    android:visibility="gone"
+                    app:strokeColor="@color/gold"
+                    android:textColor="@color/gold"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+            <!-- Notification toggle -->
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send push notification to all users"
+                android:textColor="@color/ink"
+                android:layout_marginBottom="22dp"
+                app:thumbTint="@color/gold"
+                app:trackTint="@color/gold_light" />
+
+            <ProgressBar
+                android:id="@+id/progressForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:indeterminateTint="@color/gold"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPublish"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:text="Publish Post"
+                android:textSize="15sp"
+                android:backgroundTint="@color/gold"
+                android:layout_marginBottom="10dp"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReset"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Reset Form"
+                android:layout_marginBottom="32dp"
+                app:strokeColor="@color/gold"
+                android:textColor="@color/gold"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- MANAGE POSTS LIST -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAdminPosts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="14dp"
+            android:clipToPadding="false" />
+
+        <ProgressBar
+            android:id="@+id/progressAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/gold"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment android:id="@+id/homeFragment"
+        android:name="com.nur.app.ui.home.HomeFragment"
+        android:label="Home" />
+    <fragment android:id="@+id/prayersFragment"
+        android:name="com.nur.app.ui.prayers.PrayersFragment"
+        android:label="Prayers" />
+    <fragment android:id="@+id/reflectionFragment"
+        android:name="com.nur.app.ui.reflection.ReflectionFragment"
+        android:label="Reflection" />
+    <fragment android:id="@+id/guidanceFragment"
+        android:name="com.nur.app.ui.guidance.GuidanceFragment"
+        android:label="Guidance" />
+    <fragment android:id="@+id/bookmarksFragment"
+        android:name="com.nur.app.ui.home.BookmarksFragment"
+        android:label="Bookmarks" />
+</navigation>

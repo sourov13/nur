@@ -1,0 +1,2 @@
+-keep class com.nur.app.data.model.** { *; }
+-keep class com.google.firebase.** { *; }
